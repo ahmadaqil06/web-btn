@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results retried="1" ignored="0" total="3" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-04T09:27:25 ICT" name="Test Suites MVP3" finished-at="2023-10-04T09:27:50 ICT" duration-ms="24121">
+    <groups>
+    </groups>
+    <test started-at="2023-10-04T09:27:25 ICT" name="Test BTN " finished-at="2023-10-04T09:27:50 ICT" duration-ms="24121">
+      <class name="tests.TestBtn">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TestBtn@661972b0]" started-at="2023-10-04T09:27:26 ICT" name="setUp" finished-at="2023-10-04T09:27:36 ICT" duration-ms="10243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testBtnConvertValas()[pri:0, instance:tests.TestBtn@661972b0]" started-at="2023-10-04T09:27:36 ICT" name="testBtnConvertValas" description="Dashboard BTN.co.id" finished-at="2023-10-04T09:27:45 ICT" duration-ms="8168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBtnConvertValas -->
+        <test-method retried="true" signature="moveValasConvert()[pri:1, instance:tests.TestBtn@661972b0]" started-at="2023-10-04T09:27:45 ICT" name="moveValasConvert" description="Move to Valas Information" finished-at="2023-10-04T09:27:46 ICT" duration-ms="1324" status="SKIP">
+          <exception class="java.lang.NumberFormatException">
+            <message>
+              <![CDATA[For input string: "15.690,00"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NumberFormatException: For input string: "15.690,00"
+at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+at java.base/java.lang.Integer.parseInt(Integer.java:668)
+at java.base/java.lang.Integer.parseInt(Integer.java:786)
+at org.example.TestBtnPages.verifyHasil(TestBtnPages.java:72)
+at tests.TestBtn.moveValasConvert(TestBtn.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NumberFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- moveValasConvert -->
+        <test-method signature="moveValasConvert()[pri:1, instance:tests.TestBtn@661972b0]" started-at="2023-10-04T09:27:47 ICT" name="moveValasConvert" description="Move to Valas Information" finished-at="2023-10-04T09:27:48 ICT" duration-ms="1645" status="FAIL">
+          <exception class="java.lang.NumberFormatException">
+            <message>
+              <![CDATA[For input string: "15.690,00"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NumberFormatException: For input string: "15.690,00"
+at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+at java.base/java.lang.Integer.parseInt(Integer.java:668)
+at java.base/java.lang.Integer.parseInt(Integer.java:786)
+at org.example.TestBtnPages.verifyHasil(TestBtnPages.java:72)
+at tests.TestBtn.moveValasConvert(TestBtn.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:262)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NumberFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- moveValasConvert -->
+        <test-method is-config="true" signature="getResult()[pri:0, instance:tests.TestBtn@661972b0]" started-at="2023-10-04T09:27:48 ICT" name="getResult" finished-at="2023-10-04T09:27:50 ICT" duration-ms="1061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestBtn@661972b0]" started-at="2023-10-04T09:27:50 ICT" name="tearDown" finished-at="2023-10-04T09:27:50 ICT" duration-ms="788" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.TestBtn -->
+    </test> <!-- Test BTN  -->
+  </suite> <!-- Test Suites MVP3 -->
+</testng-results>

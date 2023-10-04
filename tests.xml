@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suites MVP3" thread-count="5" parallel="classes">
+    <listeners>
+        <listener class-name="listeners.TestListener" />
+        <listener class-name="listeners.AnnotationTransformer" />
+    </listeners>
+
+    <test name="Test BTN ">
+        <classes>
+            <class name="tests.TestBtn" />
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test BTN "
+           tests="3"
+           failures="1"
+           errors="0"
+           skipped="1"
+           time="11.137">
+    <properties></properties>
+
+            <testcase
+                name="moveValasConvert"
+                time="1.645"
+                classname="tests.TestBtn">
+
+            <failure type="java.lang.NumberFormatException" message="For input string: &quot;15.690,00&quot;">
+                <![CDATA[java.lang.NumberFormatException: For input string: "15.690,00"
+                java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)java.base/java.lang.Integer.parseInt(Integer.java:668)java.base/java.lang.Integer.parseInt(Integer.java:786)org.example.TestBtnPages.verifyHasil(TestBtnPages.java:72)tests.TestBtn.moveValasConvert(TestBtn.java:32)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)java.base/java.lang.reflect.Method.invoke(Method.java:568)org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:262)org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </failure>
+    </testcase>
+
+            <testcase
+                name="moveValasConvert"
+                time="0.0"
+                classname="tests.TestBtn">
+            </testcase>
+
+            <testcase
+                name="testBtnConvertValas"
+                time="8.168"
+                classname="tests.TestBtn">
+            </testcase>
+</testsuite>

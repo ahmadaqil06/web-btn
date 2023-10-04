@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 26.399 s <<< FAILURE! - in TestSuite
+tests.TestBtn.moveValasConvert  Time elapsed: 1.895 s  <<< FAILURE!
+java.lang.NumberFormatException: For input string: "15.690,00"
+	at tests.TestBtn.moveValasConvert(TestBtn.java:32)
+
