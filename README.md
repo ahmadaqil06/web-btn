@@ -12,7 +12,6 @@ These instructions will get you a copy of the project up and running on your loc
   ( Run your tests in arbitrarily big thread pools with various policies available (all methods in their own thread, one thread per test class, etc...).
   ( Test that your code is multithreading safe.
 * Flexible test configuration.
-* Support for data-driven testing (with @DataProvider).
 * Support for parameters.
 * Powerful execution model (no more TestSuite).
 * Supported by a variety of tools and plug-ins (Eclipse, IDEA, Maven, etc...).
