@@ -3,7 +3,8 @@ package tests;
 
 import extentreports.ExtentManager;
 import logs.Log;
-import org.example.TestBtnPages;
+
+import org.btn.Pages.TestBtnPages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -56,6 +57,16 @@ public class BaseTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public static int change_years_to_month(int tahun){
+        int bulan = tahun * 12;
+        return bulan;
+    }
+
+    public static double calculate_property_prices(double penghasilan, double pengeluaran, int jumlahBulan) {
+        double pendapatanBersih = (penghasilan - pengeluaran) * jumlahBulan / 3.0;
+        return pendapatanBersih;
     }
 
     @BeforeTest
