@@ -22,7 +22,7 @@ public class TestBtn extends BaseTest {
         startTest("Move to converter valas Pages", "Move to converter valas Pages");
         testBtn.verifyValasInformation();
         getTest().log(Status.INFO, "Verify that you have moved pages and the text is there");
-        scroll();
+        scrollDown(driver, 1200);
         testBtn.inptNominal("2");
         getTest().log(Status.INFO, "Input nominal USD");
         testBtn.selectCurrentCode();

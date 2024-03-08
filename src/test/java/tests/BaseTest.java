@@ -5,10 +5,14 @@ import extentreports.ExtentManager;
 import logs.Log;
 
 import org.btn.Pages.TestBtnPages;
+import org.btn.Pages.CalculatePrice.Property_price;
+import org.btn.Pages.Dashboard.Dashboard_pages;
+import org.btn.Utility.Data;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -35,8 +39,12 @@ public class BaseTest {
 
     // protected static WebDriver driver;
     protected WebDriverWait wait;
+    protected Data data;
     
     protected TestBtnPages testBtn;
+    protected Dashboard_pages dashboard_pages;
+    protected Property_price property_price;
+    protected String baseUrl = "https://www.btnproperti.co.id";
 
     // Get Os Name
     protected RemoteWebDriver driver;
@@ -46,9 +54,24 @@ public class BaseTest {
         return driver;
     }
 
-    public void scroll() {
+    public static void scrollDown(WebDriver driver, int pixels) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,1200)");
+        js.executeScript("window.scrollBy(0," + pixels + ")");
+    }
+
+    public static void slowScrollToEnd(WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        long scrollHeight = (long) js.executeScript("return document.body.scrollHeight");
+
+        // Scroll perlahan hingga akhir halaman
+        for (long scroll = 0; scroll < scrollHeight; scroll += 10) {
+            js.executeScript("window.scrollTo(0, " + scroll + ")");
+            try {
+                Thread.sleep(50); // Sesuaikan dengan kecepatan scroll yang diinginkan (ms)
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void delay() {
@@ -57,6 +80,16 @@ public class BaseTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public static int generateRandomPrice() {
+        Random rand = new Random();
+        int min = 1000000; 
+        int max = 10; 
+        int randomNumber = rand.nextInt(max) + 1; 
+        int randomPrice = randomNumber * 10000000; 
+        
+        return randomPrice;
     }
 
     public static int change_years_to_month(int tahun){
@@ -101,16 +134,20 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Log.info("Browser is opening");
 
-        driver.get("https://www.btn.co.id/");
+        // driver.get("https://www.btnproperti.co.id/");
 
         driver.manage().window().maximize();
 
+        data = new Data();
+        
         testBtn = new TestBtnPages(driver,wait);
+        dashboard_pages = new Dashboard_pages(driver, wait);
+        property_price = new Property_price(driver, wait);
     }
 
     @AfterClass
     public void getResult() {
-         driver.quit();
+        //  driver.quit();
     }
 
     @AfterSuite

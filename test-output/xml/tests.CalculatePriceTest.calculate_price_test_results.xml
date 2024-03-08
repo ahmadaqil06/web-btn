@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestNGTest-04570dcb-23d8-4a38-bcdf-1536ea79a34d"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="3.084">
+    <properties></properties>
+
+
+
+            <testcase
+                name="calculate_price"
+                time="3.084"
+                classname="tests.CalculatePriceTest.calculate_price_test">
+            </testcase>
+</testsuite>
