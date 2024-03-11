@@ -4,7 +4,6 @@ package tests;
 import extentreports.ExtentManager;
 import logs.Log;
 
-import org.btn.Pages.TestBtnPages;
 import org.btn.Pages.CalculatePrice.Property_price;
 import org.btn.Pages.Dashboard.Dashboard_pages;
 import org.btn.Utility.Data;
@@ -40,8 +39,7 @@ public class BaseTest {
     // protected static WebDriver driver;
     protected WebDriverWait wait;
     protected Data data;
-    
-    protected TestBtnPages testBtn;
+
     protected Dashboard_pages dashboard_pages;
     protected Property_price property_price;
     protected String baseUrl = "https://www.btnproperti.co.id";
@@ -105,15 +103,15 @@ public class BaseTest {
     @BeforeTest
     public void setUp() throws IOException {
         String rootProjectDirectoryPath = System.getProperty("user.dir");
-        String resourcesDataWinPath = rootProjectDirectoryPath + "\\src\\test\\resources\\Download\\";
-        String resourcesDataUnixPath = rootProjectDirectoryPath + "/src/test/resources/Download/";
+        String resourcesDataWinPath = rootProjectDirectoryPath + "\\src\\test\\resources\\driver\\";
+        String resourcesDataUnixPath = rootProjectDirectoryPath + "/src/test/resources/driver/";
 
         HashMap<String, Object> chromePrefs = new HashMap<>();
         chromePrefs.put("profile.default_content_settings.popups", 0);
         if (detectOs.contains("win")) {
-            chromePrefs.put("download.default_directory", resourcesDataWinPath);
+            chromePrefs.put("driver.default_directory", resourcesDataWinPath);
         } else {
-            chromePrefs.put("download.default_directory", resourcesDataUnixPath);
+            chromePrefs.put("driver.default_directory", resourcesDataUnixPath);
         }
         
         ChromeOptions options = new ChromeOptions();
@@ -134,13 +132,10 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Log.info("Browser is opening");
 
-        // driver.get("https://www.btnproperti.co.id/");
-
         driver.manage().window().maximize();
 
         data = new Data();
-        
-        testBtn = new TestBtnPages(driver,wait);
+
         dashboard_pages = new Dashboard_pages(driver, wait);
         property_price = new Property_price(driver, wait);
     }

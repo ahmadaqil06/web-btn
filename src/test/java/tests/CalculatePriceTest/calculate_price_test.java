@@ -16,9 +16,6 @@ public class calculate_price_test extends BaseTest {
     public void calculate_price() throws InterruptedException, IOException {
         driver.get(baseUrl + "/tools/hitung-harga-properti");
         startTest("[Positive] Calculate price", "calculate price kpr");
-        if (!dashboard_pages.isDashboardTextPresent(driver)) {
-            driver.navigate().refresh();
-        }
         property_price.total_income("");
         getTest().log(Status.INFO, "Scroll to end page");
         
