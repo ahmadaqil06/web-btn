@@ -18,7 +18,6 @@ public class utils {
             File excelFile = new File(".\\src\\main\\java\\org\\btn\\Utility\\excel\\exceltest.xlsx");
             String outputJsonFilePath = ".\\src\\main\\java\\org\\btn\\Utility\\excel\\test excel.json";
 
-
             // Kolom yang ingin disimpan dalam JSON
             String[] columnsToExport = {"Column1", "Column3", "Column5"};
 

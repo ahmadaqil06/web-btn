@@ -1,9 +1,11 @@
 package org.btn.Pages.CalculatePrice;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Property_price {
@@ -25,13 +27,18 @@ public class Property_price {
         wait.until(ExpectedConditions.elementToBeClickable(totalIncome)).sendKeys(outcome);
     }
 
-    public void select_time(){
-        By time = By.xpath("//input[@placeholder='Pengeluaran']");
+    public void select_time(int index){
+        By time = By.xpath("//select[@id='waktu']");
         wait.until(ExpectedConditions.elementToBeClickable(time)).click();
+
+        WebElement dropdownElement = driver.findElement(By.xpath("//select[@id='waktu']"));
+        Select dropdown = new Select(dropdownElement);
+        dropdown.selectByIndex(index);
+        dropdownElement.sendKeys(Keys.ESCAPE);
     }
 
     public void calculate(){
-        By calc = By.xpath("//button[normalize-space()='Hitung']");
+        By calc = By.id("hitung_harga_button");
         wait.until(ExpectedConditions.elementToBeClickable(calc)).click();
     }
 
